@@ -47,3 +47,9 @@ pyenv exec pip wheel --wheel-dir=./wheelhouse -r requirements.txt
 git add requirements.txt wheelhouse
 git commit -m 'update wheelehouse'
 ```
+
+# About Wheels and Wheelhouse
+* http://pythonwheels.com/
+* https://pypi.python.org/pypi/Wheelhouse
+* https://github.com/level12/keg
+  * keg project utilize wheelhouse

@@ -1,4 +1,4 @@
-# setup
+# Settingup the Project
 
 TODO: put together all these setups to setup.sh
 

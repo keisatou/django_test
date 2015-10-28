@@ -39,7 +39,7 @@ pyenv local django
 pyenv exec pip install -r requirements.txt --use-wheel --no-index --find-links=./wheelhouse
 ```
 
-# Save Python modules to wheel
+# Save Python modules to Wheelhouse
 refer to https://www.qoosky.net/references/263/
 ```
 pyenv exec pip freeze > requirements.txt

@@ -33,3 +33,17 @@ pyenv virtualenv 3.5.0 django
 ```
 pyenv local django
 ```
+
+## install project-specific Python dependencies with pip
+```
+pyenv exec pip install -r requirements.txt --use-wheel --no-index --find-links=./wheelhouse
+```
+
+# Save Python modules to wheel
+refer to https://www.qoosky.net/references/263/
+```
+pyenv exec pip freeze > requirements.txt
+pyenv exec pip wheel --wheel-dir=./wheelhouse -r requirements.txt
+git add requirements.txt wheelhouse
+git commit -m 'update wheelehouse'
+```

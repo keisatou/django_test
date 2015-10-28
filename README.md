@@ -34,7 +34,7 @@ pyenv virtualenv 3.5.0 django
 pyenv local django
 ```
 
-## install project-specific Python dependencies with pip
+## install project-specific Python dependencies from Wheelhouse
 ```
 pyenv exec pip install -r requirements.txt --use-wheel --no-index --find-links=./wheelhouse
 ```

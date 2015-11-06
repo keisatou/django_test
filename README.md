@@ -41,6 +41,7 @@ pyenv exec pip install -r requirements.txt --use-wheel --no-index --find-links=.
 
 # Save Python modules to Wheelhouse
 refer to https://www.qoosky.net/references/263/
+http://pelican.aodag.jp/20140502-pip-wheel-speedup.html#
 ```
 pyenv exec pip freeze > requirements.txt
 pyenv exec pip wheel --wheel-dir=./requirements/wheelhouse -r requirements.txt

@@ -36,14 +36,15 @@ pyenv local django
 
 ## Install project-specific Python dependencies from Wheelhouse
 ```
-pyenv exec pip install -r requirements.txt --use-wheel --no-index --find-links=./wheelhouse
+pyenv exec pip install -r requirements.txt --use-wheel --no-index --find-links=./requirements/wheelhouse
 ```
 
 # Save Python modules to Wheelhouse
 refer to https://www.qoosky.net/references/263/
+http://pelican.aodag.jp/20140502-pip-wheel-speedup.html#
 ```
 pyenv exec pip freeze > requirements.txt
-pyenv exec pip wheel --wheel-dir=./wheelhouse -r requirements.txt
+pyenv exec pip wheel --wheel-dir=./requirements/wheelhouse -r requirements.txt
 git add requirements.txt wheelhouse
 git commit -m 'update wheelehouse'
 ```

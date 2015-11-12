@@ -25,6 +25,12 @@ pyenv install 3.5.0
 pyenv rehash
 ```
 
+## upgrade pip
+```
+pyenv shell 3.5.0
+pyenv exec pip install --upgrade pip
+```
+
 ## Create virtualenv for this project named `django`
 ```
 pyenv virtualenv 3.5.0 django

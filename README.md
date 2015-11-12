@@ -22,6 +22,7 @@ exec "$SHELL"
 use 3.5.0 in this Project.
 ```
 pyenv install 3.5.0
+pyenv rehash
 ```
 
 ## Create virtualenv for this project named `django`

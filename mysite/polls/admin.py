@@ -1,8 +1,8 @@
 """This module is blha."""
 from django.contrib import admin
 
-from mysite.polls.models import Choice
-from mysite.polls.models import Question
+from polls.models import Choice
+from polls.models import Question
 
 
 class ChoiceInline(admin.TabularInline):

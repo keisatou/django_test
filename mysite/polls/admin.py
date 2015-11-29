@@ -1,5 +1,22 @@
+"""This module is blha."""
 from django.contrib import admin
 
-from .models import Question
+from django.db.models import Choice
+from django.db.models import Question
 
-admin.site.register(Question)
+
+class QuestionAdmin(admin.ModelAdmin):
+    """TBD.
+
+    hoge
+    """
+
+    fieldsets = [
+        (None, {'fields': ['question_text']}),
+        ('Date information',
+         {'fields': ['pub_date'], 'classes': ['collapse']}),
+    ]
+
+
+admin.site.register(Question, QuestionAdmin)
+admin.site.register(Choice)

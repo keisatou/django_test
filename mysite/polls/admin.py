@@ -1,14 +1,24 @@
 """This module is blha."""
 from django.contrib import admin
 
-from django.db.models import Choice
-from django.db.models import Question
+from mysite.polls.models import Choice
+from mysite.polls.models import Question
+
+
+class ChoiceInline(admin.TabularInline):
+    """ChoiceInline.
+
+    description of ChoiceInline.
+    """
+
+    model = Choice
+    extra = 3
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    """TBD.
+    """QuestionAdmin.
 
-    hoge
+    description of QuestionAdmin.
     """
 
     fieldsets = [
@@ -16,7 +26,8 @@ class QuestionAdmin(admin.ModelAdmin):
         ('Date information',
          {'fields': ['pub_date'], 'classes': ['collapse']}),
     ]
+    inlines = [ChoiceInline]
 
 
 admin.site.register(Question, QuestionAdmin)
-admin.site.register(Choice)
+# admin.site.register(Choice)
